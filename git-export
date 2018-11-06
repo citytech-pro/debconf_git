@@ -1,7 +1,5 @@
 #!/bin/sh
 
-rm -rf $1/usr/lib/postgresql/10/include
-
 git archive master | tar -x -C $1
 
 for d in $(find $1 -type d -name 'man[1-9]'); do
